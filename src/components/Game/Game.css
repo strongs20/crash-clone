@@ -1,16 +1,20 @@
-.Nav {
-    background: #182C38;
+.Game {
+    align-items: left;
+    background: #213643;
+    border-radius: 9px 9px 9px 9px;
     height: 70px;
-    filter: drop-shadow(0px 2px 2px #0D181F);
     display: flex;
     /* justify-content: space-between; */
+    margin-top: 110px;
+    margin-left: 0px;
+    margin-right: -1000px;
     padding: 0.5rem calc((90vw - 1000px) / 2);
     z-index: 10;
-    /* Third Nav */
+    /* Third Game */
     /* justify-content: flex-start; */
 }
 
-.Nav image {
+.Game image {
     color: #fff;
     position: left;
     display: flex;
@@ -21,23 +25,23 @@
     cursor: pointer;
 }
 
-.Nav button {
-    border-radius: 0px 6px 6px 0px;
+.Game button {
+    border-radius: 6px 6px 6px 6px;
     font-size: 17px;
-    background: #256ce1;
-    padding: 13px 20px;
-    height: 45px;
-    color: #fff;
+    background: #1DFF21;
+    padding: 44px 80px;
+    color: #003E01;
     outline: none;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    margin-top: 4px;
+    margin-top: 0px;
+    padding-top: 25px;
 }
 
-.Nav button:hover {
-    background: #17458f;
+.Game button:hover {
+    background: #17c31a;
 }
 
 .balance {
@@ -82,7 +86,6 @@
 }
 
 .change_currency {
-    margin-top: 0px;
     font-size: 17px;
     height: 45px;
     border-radius: 0px 0px 0px 0px;
@@ -104,48 +107,7 @@
     margin-top: 6px;
 }
 
-.edit_balance {
-    font-size: 17px;
-    color: #fff;
-    outline: none;
-    border: none;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    margin-top: 60px;
-    padding-left:18px;
-    margin-left: -300px;
+.Game h1 {
+    padding-left: 300px;
+    background-color: #223543;
 }
-
-.edit_balance input {
-    width: 275px;
-    height: 40px;
-    margin: 1px;
-    border: 2px solid #5b94df;
-    border-radius: 5px;
-    background: white;
-    padding: 5px;
-    font-size: 20px;
-    margin-top:5px;
-    margin-bottom:10px;
-}
-
-.edit_balance button {
-    width: 90px;
-    margin-bottom:10px;
-    height: 40px;
-    margin-left: 35px;
-    border: 2px solid #11be4d;
-    background: #46c171;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 20px;
-    margin-top:-15px;
-}
-
-.edit_balance h1 {
-    text-align: center;
-    color:red;
-    font-size:15px;
-}
-
-

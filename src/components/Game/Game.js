@@ -6,6 +6,7 @@ import Navbar from '../Navbar/Navbar.js'
 const GameContainer = ({setBalance, balance}) => {
     const [randInt, setRandInt] = useState(Math.floor(Math.random() * 10));
     const [betAmt, setBetAmt] = useState(0);
+    const [inGame, setInGame] = useState(true);
 
     const minusBalance = (val) => {
         setBalance(parseFloat(balance)-val);
@@ -22,6 +23,10 @@ const GameContainer = ({setBalance, balance}) => {
         setBetAmt(0);
     }
 
+    // while (inGame) {
+    //     // roll();
+    // }
+
     return (
         <div>
          <div className='Game'>
@@ -32,6 +37,7 @@ const GameContainer = ({setBalance, balance}) => {
              <h1>{randInt}</h1>
              <h1>{betAmt}</h1>
          </div>
+         <br></br>
          </div>
     );
 };

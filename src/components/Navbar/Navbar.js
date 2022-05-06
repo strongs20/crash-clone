@@ -8,12 +8,23 @@ import GameContainer from '../Game/Game.js';
 localStorage.setItem("Balance", 10.01);
 
 const Navbar = () => {
+    function roundTo(n, digits) {
+    if (digits === undefined) {
+        digits = 0;
+    }
+    
+    var multiplicator = Math.pow(10, digits);
+    n = parseFloat((n * multiplicator).toFixed(11));
+    var test =(Math.round(n) / multiplicator);
+    return +(test.toFixed(digits));
+    }
+
     // This is the user's balance
     const [balance, setBalance] = useState(parseFloat(localStorage.getItem("Balance")));
     const [tempBalance, setTempBalance] = useState(0);
     const [showEdit, setShowEdit] = useState(false);
     const [errMsg, setErrMsg] = useState("Must contain 8 decimals!");
-
+    
     // Function to count decimals of input
     var countDecimals = function(value) {
         let text = value.toString()
@@ -80,7 +91,7 @@ const Navbar = () => {
                    />
                    <div>
                    <br></br>
-                   <button onClick={() => changeBalance(parseFloat(tempBalance))}>Confirm</button>
+                   <button onClick={() => changeBalance(parseFloat(tempBalance.toFixed(2)))}>Confirm</button>
                    <button onClick={() => setShowEdit(false)}>Close</button>
                    </div>
                    <h1>{errMsg}</h1>

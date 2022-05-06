@@ -110,4 +110,7 @@
 .Game h1 {
     padding-left: 300px;
     background-color: #223543;
+    align-items: center;
+    text-align: center;
+    width:200px;
 }
